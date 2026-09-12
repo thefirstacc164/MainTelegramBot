@@ -2,7 +2,7 @@ services:
   - type: worker
     name: main-telegram-bot
     runtime: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: python3 -m pip install -r requirements.txt
     startCommand: python3 main.py
     envVars:
       - key: BOT_TOKEN
@@ -14,4 +14,4 @@ services:
       - key: GITHUB_REPO
         sync: false
       - key: PYTHON_VERSION
-        value: "3.12.8"
+        value: "3.11.9"
